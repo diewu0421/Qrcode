@@ -24,13 +24,23 @@
             }(),
             language:(navigator.browserLanguage || navigator.language).toLowerCase()
         }
-        document.writeln("语言版本: "+browser.language);
-        document.writeln(" 是否为移动终端: "+browser.versions.mobile);
-        document.writeln(" ios终端: "+browser.versions.ios);
-        document.writeln(" android终端: "+browser.versions.android);
-        document.writeln(" 是否为iPhone: "+browser.versions.iPhone);
-        document.writeln(" 是否iPad: "+browser.versions.iPad);
-        document.writeln(navigator.userAgent);
+//        document.writeln("语言版本: "+browser.language);
+//        document.writeln(" 是否为移动终端: "+browser.versions.mobile);
+//        document.writeln(" ios终端: "+browser.versions.ios);
+//        document.writeln(" android终端: "+browser.versions.android);
+//        document.writeln(" 是否为iPhone: "+browser.versions.iPhone);
+//        document.writeln(" 是否iPad: "+browser.versions.iPad);
+//        document.writeln(navigator.userAgent);
+
+        if (browser.versions.ios){
+            window.location = "http://www.baidu.com";
+            document.writeln("您的设备是ios类型")
+        }else if (browser.versions.android){
+            Window.location = "http://www.hao123.com";
+            document.writeln("您的设备是android类型")
+        }else {
+            document.writeln("请使用移动端设备打开该网址!")
+        }
     </script>
 </body>
 </html>
